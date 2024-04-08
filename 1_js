@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <style>
+    canvas{
+      width: 100vw;
+      height: 80vh;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="lienzo">
+    No soporta canvas
+  </canvas>
+  <script type="text/javascript">
+    var canvas =document.getElementById("lienzo");
+    var ctx= canvas.getContext("2d");
+
+   //tejado grande
+    ctx.fillStyle="red";
+    ctx.beginPath();
+    ctx.moveTo(100,2);
+    ctx.lineTo(52,60)
+    ctx.lineTo(148,60);
+    ctx.lineTo(100,2);
+    ctx.fill();
+    
+    //tejado chico
+    ctx.fillStyle="#d25c43";
+    ctx.lineWidht=1;
+    ctx.beginPath();
+    ctx.moveTo(100,10);
+    ctx.lineTo(60,60)
+    ctx.lineTo(140,60);
+    ctx.lineTo(100,10);
+    ctx.fill();
+ 
+    ctx.lineWidht=1;
+    ctx.fillStyle="#a48360";
+    ctx.beginPath();
+    ctx.moveTo(100,17);
+    ctx.lineTo(67,60)
+    ctx.lineTo(133,60);
+    ctx.lineTo(100,17);
+    ctx.fill();
+
+    ctx.fillStyle="#e27830"; //marron
+    ctx.lineWidht=2;
+    ctx.fillRect(91,32,19,21);
+    ctx.fillStyle="#00eafe"; //azul
+    ctx.fillRect(93,35,15,15);
+
+    ctx.fillStyle="#e27830";
+    ctx.fillRect(99,35,2,15);
+    ctx.fillRect(93,41,15,2);
+    ctx.fillStyle="#f7f3b3";
+    ctx.fillRect(60,60,80,60);
+    ctx.fillStyle="#f7c153";
+    ctx.fillRect(60,60,80,10);
+    ctx.fillStyle="#834700"; //marco de la puerta
+    ctx.fillRect(66,80,22,40);
+    ctx.fillStyle="#bd6600";
+    ctx.fillRect(68,82,18,38);
+    //ventana de la puerta
+    ctx.fillStyle="#00eafe"; //azul
+    ctx.fillRect(68,82,18,38);
+
+
+  </script>
+</body>
+</html>
