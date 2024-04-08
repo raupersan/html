@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <style>
+    canvas{
+      width: 50vw;
+      height: 50vh;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="lienzo">
+    No soporta canvas
+  </canvas>
+  <script type="text/javascript">
+    var canvas =document.getElementById("lienzo");
+    var contexto= canvas.getContext("2d");
+
+    contexto.fillStyle="red";
+    contexto.fillRect(0,0,20,20);
+    contexto.fillStyle="blue";
+    contexto.fillRect(20,20,20,20);
+
+    contexto.lineWidth=1;
+    contexto.beginPath();
+    contexto.moveTo(50,50);
+    contexto.lineTo(50,70);
+    contexto.lineTo(70,70);
+    contexto.closePath();
+    contexto.stroke();
+
+    contexto.beginPath(); 
+    contexto.arc(100,100,10,1,100);
+    contexto.fill();
+  </script>
+</body>
+</html>
